@@ -569,7 +569,7 @@ const App: React.FC = () => {
                 </a>
                 <div className={`contact-popup ${activePopup === 'phone' ? 'show' : ''}`}>
                   <div className="popup-title">Registration Co-Lead</div>
-                  <div className="popup-value">+91 7646903404</div>
+                  <div className="popup-value">K Goutam<br/>+91 7646903404</div>
                 </div>
               </div>
 
@@ -583,9 +583,16 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <a href="#location" className="social-icon" aria-label="Location">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
-              </a>
+              <div className="contact-popup-container">
+                <a href="#" className="social-icon" aria-label="Location" onClick={(e) => handlePopupToggle(e, 'location')}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                </a>
+                <div className={`contact-popup ${activePopup === 'location' ? 'show' : ''}`}>
+                  <div className="popup-title">Venue</div>
+                  <div className="popup-value" style={{ fontSize: '0.95rem' }}>VVCE 3rd stage, Gokulam,<br/>Mysore - 570002</div>
+                </div>
+              </div>
+
               <a href="https://www.instagram.com/iotcrew.vvce/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
               </a>
