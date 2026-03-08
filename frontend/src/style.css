@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu-overlay {
   position: fixed;
-  top: 80px;
+  top: 80px; /* Below navbar */
   left: 0;
   width: 100%;
   height: calc(100vh - 80px);
@@ -233,25 +233,27 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 2rem;
-  transform: translateY(-10px);
+  padding-top: 3rem;
+  transform: translateY(-20px);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 99;
+  z-index: 99; /* Below nav items but above content */
   visibility: hidden;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
 
 .mobile-menu-overlay.open {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
   width: 100%;
 }
@@ -259,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-link {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
   transition: var(--transition-smooth);
