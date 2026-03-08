@@ -1334,8 +1334,19 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-menu-btn {
     display: block;
   }
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
   .hero-title {
     font-size: 2.75rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
   }
   .hero-visual {
     height: auto;
@@ -1343,13 +1354,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   .logo-container {
     transform: scale(0.65);
+    width: 280px;
+    height: 280px;
   }
   .logo-container:hover {
     transform: scale(0.7);
   }
+  .orbit-el {
+    font-size: 0.9rem;
+    min-width: 150px;
+    padding: 0.6rem 1rem;
+  }
   .stats-ribbon {
     flex-direction: column;
     gap: 2rem;
+    padding: 2rem;
   }
   .about-grid, .about-cards {
     grid-template-columns: 1fr;
@@ -1373,6 +1392,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .prize-card {
     padding-left: 3rem;
+    padding-right: 1.5rem;
   }
   .prize-card.gold {
     transform: none;
@@ -1380,6 +1400,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .prize-card.gold:hover {
     transform: translateY(-5px);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .hidden-mobile {
     display: none !important;
@@ -1406,5 +1432,45 @@ h1, h2, h3, h4, h5, h6 {
   }
   .social-icons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .stat-value {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .prize-card {
+    padding-left: 2rem;
+    padding-top: 3.5rem;
+  }
+  .prize-category-label {
+    width: 100%;
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 0;
+  }
+  .prize-category-label span {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  .title-sponsor {
+    padding: 2rem 1rem;
+  }
+  .title-sponsor h3 {
+    font-size: 2rem;
+  }
+  .sponsors-grid {
+    grid-template-columns: 1fr;
   }
 }
