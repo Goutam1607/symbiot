@@ -508,7 +508,7 @@ const App: React.FC = () => {
         </section>
       </main>
 
-      <footer className="footer-redesigned">
+      <footer id="contact" className="footer-redesigned">
         <div className="footer-main">
           {/* Column 1: Logo */}
           <div className="footer-col footer-col-logo">
