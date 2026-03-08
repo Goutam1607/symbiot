@@ -212,6 +212,61 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 101;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn.open {
+  transform: rotate(90deg);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: var(--bg-surface);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 99;
+  visibility: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-overlay.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  transition: var(--transition-smooth);
+}
+
+.mobile-nav-link:hover {
+  color: var(--accent-cyan);
 }
 
 /* Hero Section */
@@ -1280,7 +1335,17 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
+  }
+  .hero-visual {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .logo-container {
+    transform: scale(0.65);
+  }
+  .logo-container:hover {
+    transform: scale(0.7);
   }
   .stats-ribbon {
     flex-direction: column;
@@ -1306,6 +1371,9 @@ h1, h2, h3, h4, h5, h6 {
   .prizes-grid {
     grid-template-columns: 1fr;
   }
+  .prize-card {
+    padding-left: 3rem;
+  }
   .prize-card.gold {
     transform: none;
     order: -1;
@@ -1313,9 +1381,30 @@ h1, h2, h3, h4, h5, h6 {
   .prize-card.gold:hover {
     transform: translateY(-5px);
   }
-  .footer-content {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .footer-main {
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
     text-align: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+  .footer-col {
+    align-items: center;
+  }
+  .footer-text, .footer-heading {
+    text-align: center;
+  }
+  .footer-divider {
+    width: 60%;
+    height: 1px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+  }
+  .social-icons {
+    justify-content: center;
   }
 }
